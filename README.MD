@@ -32,22 +32,13 @@ Una aplicación Python para procesar imágenes con marcas de agua utilizando la 
 ## 📋 Requisitos
 
 - Python 3.6 o superior
-- Biblioteca `requests`
 - Conexión a internet
 - API key de Kaze (incluida en el código)
 
-## 🔧 Instalación
-
-1. Clona o descarga el repositorio
-2. Navega al directorio del proyecto
-3. Instala las dependencias necesarias: pip install requests
-
 ## 🚀 Uso
 
-1. Prepara tu archivo `listPrueba.txt` con los datos necesarios
-2. Ejecuta el script: python main.py
-
-
+1. Prepara tu archivo `list.txt` con los datos necesarios
+2. Ejecuta el script: python app.py
 3. El script procesará las imágenes y generará el archivo `resultado.csv` con los resultados
 
 ## 📁 Estructura de Archivos
@@ -57,12 +48,11 @@ Una aplicación Python para procesar imágenes con marcas de agua utilizando la 
 ├── list.txt         # Archivo de entrada con datos (ejemplo)
 ├── resultado.csv          # Archivo de salida (se crea automáticamente)
 ├── README.md              # Este archivo
-└── requirements.txt       # Dependencias del proyecto
 ```
 
 ## 📥 Formato de Entrada
 
-El archivo `listPrueba.txt` debe tener el siguiente formato:
+El archivo `list.txt` debe tener el siguiente formato:
 
 ```
 MLA123456789,SKU001,https://ejemplo.com/imagen1.jpg
