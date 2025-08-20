@@ -4,6 +4,8 @@ import os
 import json
 from urllib.request import urlopen
 
+API_KEY=''
+
 def obtenerLista():
     sku_dict = {}
 
@@ -71,7 +73,7 @@ def procesar(sku_dict):
             })
             
             headers = {
-                'Authorization': 'sk-JGHv8oYnXHqbExXiFVZn8bOQ',
+                'Authorization': API_KEY,
                 'Content-Type': 'application/json'
             }
             
@@ -123,7 +125,7 @@ def obtener_resultado(task_id, skuPerteneciente, listadoMlas):
     })
 
     headers = {
-        'Authorization': 'sk-JGHv8oYnXHqbExXiFVZn8bOQ',
+        'Authorization': API_KEY,
         'Content-Type': 'application/json'
     }
 
