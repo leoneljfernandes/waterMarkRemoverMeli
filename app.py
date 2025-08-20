@@ -7,7 +7,7 @@ from urllib.request import urlopen
 def obtenerLista():
     sku_dict = {}
 
-    with open('listPrueba.txt', 'r') as archivo:
+    with open('list.txt', 'r') as archivo:
         lineas = archivo.readlines()
 
         for linea in lineas:
@@ -33,12 +33,22 @@ def obtenerLista():
 
     print("Resultado final:")
     print("=" * 50)
-    for sku, datos in sku_dict.items():
-        print(f"SKU: {sku}")
-        print(f"URL: {datos['url']}")
-        print(f"MLAs: {', '.join(datos['mlas'])}")
-        print(f"Cantidad de MLAs: {len(datos['mlas'])}")
-        print("-" * 30)
+    with open('salida.txt', 'w', encoding='utf-8') as archivo:
+        for sku, datos in sku_dict.items():
+            # Para consola
+            print(f"SKU: {sku}")
+            print(f"URL: {datos['url']}")
+            print(f"MLAs: {', '.join(datos['mlas'])}")
+            print(f"Cantidad de MLAs: {len(datos['mlas'])}")
+            print("-" * 30)
+            
+            # Para archivo
+            print(f"SKU: {sku}", file=archivo)
+            print(f"URL: {datos['url']}", file=archivo)
+            print(f"MLAs: {', '.join(datos['mlas'])}", file=archivo)
+            print(f"Cantidad de MLAs: {len(datos['mlas'])}", file=archivo)
+            print("-" * 30, file=archivo)
+            print(file=archivo)
     
     return sku_dict
 
